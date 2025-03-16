@@ -1,10 +1,12 @@
-# simplerich-zsh-theme
+# simplerich-lambda-zsh-theme
 
 ## Overview
 
-This is an oh-my-zsh theme with informative git status, venv/Anaconda environment info and command execution time.
+This is an oh-my-zsh theme with informative git status, venv environment info and command execution time.
 
-![demo.png](./readme/demo.png)
+This is mainly a copy of the very cool [simplerich-zsh-theme](https://github.com/philip82148/simplerich-zsh-theme) theme. To keep my own tweaks I created this fork.
+
+TODO: [ADD SCREENSHOT]
 
 ### Features
 
@@ -40,9 +42,8 @@ The git status is updated immediately after a command is finished or every 10 se
 1. Clone the repository & copy the zsh-theme file.
 
 ```shell
-# cd path/to/where_u_want_to_clone_the_repo
-git clone --recursive https://github.com/philip82148/simplerich-zsh-theme
-cp ./simplerich-zsh-theme/simplerich.zsh-theme ~/.oh-my-zsh/themes/
+git clone git@github.com:ghaffarinia/simplerich-lambda-zsh-theme.git
+cp ./simplerich-lambda-zsh-theme/simplerich-lambda.zsh-theme ~/.oh-my-zsh/themes/
 ```
 
 2. Edit ~/.zshrc.
@@ -50,8 +51,8 @@ cp ./simplerich-zsh-theme/simplerich.zsh-theme ~/.oh-my-zsh/themes/
 ```shell
 # file:~/.zshrc
 # Find the line that reads ZSH_THEME="..." and replace it with the followings.
-ZSH_THEME="simplerich"
-source path/to/where_u_want_to_clone_the_repo/simplerich-zsh-theme/zsh-git-prompt/zshrc.sh
+ZSH_THEME="simplerich-lambda"
+source path/to/where_u_want_to_clone_the_repo/simplerich-lambda-zsh-theme/zsh-git-prompt/zshrc.sh
 ```
 
 **Attention**
@@ -85,12 +86,12 @@ See also [Overriding and adding themes](https://github.com/ohmyzsh/ohmyzsh/wiki/
 
 ### On macOS, Command Not Found: gdate
 
-- simplerich.zsh-theme depends on cmd `gdate` to get current time in milliseconds. get `gdate` on macOS by running `brew install coreutils` then `source ~/.zshrc`.
+- simplerich-lambda.zsh-theme depends on cmd `gdate` to get current time in milliseconds. get `gdate` on macOS by running `brew install coreutils` then `source ~/.zshrc`.
 - See also [#12](https://github.com/ChesterYue/ohmyzsh-theme-passion/issues/12).
 
 ### On Linux, Command Not Found: bc
 
-- simplerich.zsh-theme depends on cmd `bc` to calculate the command running time cost. [get bc on Linux](https://www.tecmint.com/bc-command-examples/#:~:text=If%20you%20don%E2%80%99t%20have%20bc%20on%20your%20system%2C,command%20prompt%20and%20simply%20start%20calculating%20your%20expressions.) then `source ~/.zshrc`.
+- simplerich-lambda.zsh-theme depends on cmd `bc` to calculate the command running time cost. [get bc on Linux](https://www.tecmint.com/bc-command-examples/#:~:text=If%20you%20don%E2%80%99t%20have%20bc%20on%20your%20system%2C,command%20prompt%20and%20simply%20start%20calculating%20your%20expressions.) then `source ~/.zshrc`.
 - See also [#13](https://github.com/ChesterYue/ohmyzsh-theme-passion/issues/13).
 
 ### On Centos 7, Shell Exit
@@ -113,7 +114,7 @@ See also [Overriding and adding themes](https://github.com/ohmyzsh/ohmyzsh/wiki/
 
 <!-- cspell:disable-next-line -->
 
-- iTerm2: Settings -> Profiles -> Colors -> Color Presets -> Import `./simplerich.itermcolors`
+- iTerm2: Settings -> Profiles -> Colors -> Color Presets -> Import `./simplerich-lambda.itermcolors`
   ![color.png](./readme/color.png)
 - Alternate terminal: Try [Alternate terminal installation and configuration](https://iterm2colorschemes.com/).
 
@@ -124,6 +125,6 @@ See also [Overriding and adding themes](https://github.com/ohmyzsh/ohmyzsh/wiki/
 
 #### Font
 
-- Install [JetBrains Mono](https://www.jetbrains.com/lp/mono/).
+- Install [Fira Code](https://formulae.brew.sh/cask/font-fira-code).
 - iTerm2: Settings -> Appearance && settings -> Profiles -> Text -> Font
-  ![font.png](./readme/font.png)
+TODO: [ADD SCREENSHOT]

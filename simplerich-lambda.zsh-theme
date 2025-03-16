@@ -58,12 +58,12 @@ precmd() { # cspell:disable-line
         local color=""
         local command_result=$1
         if $command_result; then
-            color=""
+            color="%{$fg[green]%}"
         else
             color="%{$fg[red]%}"
         fi
 
-        _SIMPLERICH_COMMAND_STATUS="${color}%(!.#.$)%{$reset_color%}"
+        _SIMPLERICH_COMMAND_STATUS="${color}%(!.#.--> λ)%{$reset_color%}"
     }
 
     output_command_execute_after() {
@@ -96,7 +96,7 @@ precmd() { # cspell:disable-line
         fi
         cost="[cost ${cost}s]"
 
-        echo "${time} $fg[cyan]${cost}${color_reset} ${cmd}\n\n"
+        echo "\n${time} $fg[cyan]${cost}${color_reset} ${cmd}"
     }
 
     # last_cmd
@@ -204,7 +204,7 @@ _simplerich_prompt() {
     }
 
     user_info() {
-        echo "%n"
+        echo "%{$fg[yellow]%}%n%{$reset_color%}"
     }
 
     python_info() {
@@ -223,8 +223,7 @@ _simplerich_prompt() {
     }
 
     directory_info() {
-        #    echo "%c";
-        echo "%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
+        echo "%{$fg[magenta]%}${PWD/#$HOME/~}%{$reset_color%}"
     }
 
     git_info() {
