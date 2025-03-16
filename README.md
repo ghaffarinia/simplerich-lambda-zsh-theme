@@ -42,7 +42,7 @@ The git status is updated immediately after a command is finished or every 10 se
 1. Clone the repository & copy the zsh-theme file.
 
 ```shell
-git clone git@github.com:ghaffarinia/simplerich-lambda-zsh-theme.git
+git clone --recursive git@github.com:ghaffarinia/simplerich-lambda-zsh-theme.git
 cp ./simplerich-lambda-zsh-theme/simplerich-lambda.zsh-theme ~/.oh-my-zsh/themes/
 ```
 
